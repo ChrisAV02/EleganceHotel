@@ -1,0 +1,127 @@
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+}
+
+html {
+      /* Permite deslizar cuando haga clic en los links del menu */
+      scroll-behavior: smooth;
+}
+
+:root {
+      --default_font: Georgia, 'Times New Roman', Times, serif;
+      --secondary_font: 'Barlow Condensed', sans-serif;
+      --third_font: 'Noto Serif Display', serif;
+}
+
+/* CONTENEDOR MENU */
+.contenedor_header {
+      background: #0009;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 99;
+}
+
+.contenedor_header header {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 15px;
+}
+
+.contenedor_header header .logo a {
+      font-family: var(--default_font);
+      font-size: 36px;
+      color: #ffffff;
+      text-decoration: none;
+}
+
+.contenedor_header header ul {
+      display: flex;
+      list-style: none;
+      margin: auto;
+}
+
+.contenedor_header header nav ul li a {
+      text-transform: uppercase;
+      font-family: var(--secondary_font);
+      font-weight: bold;
+      text-align: none;
+      color: #fff;
+      margin: 0 15px;
+      padding: 3px;
+      transition: .5s;
+      text-decoration: none;
+}
+
+.contenedor_header header nav ul li a:hover {
+      color: #535454;
+}
+
+.nav_responsive {
+      background-color: #1cb698;
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      display: none;
+}
+
+/* SECCION INICIO */
+.inicio {
+      background: linear-gradient(rgba(22, 25, 27, 0.8), rgba(19, 22, 23, 0.696)),
+            url(../RESOURCES/img6.jpg) center / cover no-repeat fixed;
+      height: 100vh;
+      color: #fff;
+      display: flex;
+      align-items: center;
+}
+
+.inicio .contenedor__banner {
+      padding: 20px;
+      max-width: 350px;
+      margin: auto;
+      text-align: center;
+      border-radius: 40px;
+}
+
+.inicio .contenedor__banner h1 {
+      font-family: var(--default_font);
+      margin-top: 40px;
+      font-size: 4rem;
+      letter-spacing: 1.8px;
+}
+
+/* GRID */
+.contenedor_grid {
+      margin: 1.5rem auto;
+      padding: 15px 25px;
+}
+
+/* Mision y Vision */
+.contenedor_img {
+      display: flex;
+      width: 1000px;
+      height: 430px;
+      margin: 2rem auto;
+}
+
+.contenedor_img  img {
+      width: 0px;
+      flex-grow: 1;
+      object-fit: cover;
+      opacity: .8;
+      transition: .5s ease;
+}
+
+.contenedor_img  img:hover {
+      cursor: crosshair;
+      width: 350px;
+      opacity: 1;
+      filter: contrast(120%);
+}
