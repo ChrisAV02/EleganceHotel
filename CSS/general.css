@@ -63,14 +63,54 @@ html {
       color: #535454;
 }
 
+/* HAMBURGER */
 .nav_responsive {
-      background-color: #1cb698;
-      color: #fff;
-      padding: 5px 10px;
-      border-radius: 5px;
+      position: fixed;
+      width: 100vw;
+      top: 0;
+      left: 0;
+      z-index: 99;
+      display: none;
+      text-align: end;
+}
+
+.hamburger {
       cursor: pointer;
+      margin-right: 0.8rem;
+}
+
+.hamburger input {
       display: none;
 }
+
+.hamburger svg {
+      height: 3em;
+      transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line {
+      fill: none;
+      stroke: #5f5f5f;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-width: 3;
+      transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+            stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line-top-bottom {
+      stroke-dasharray: 12 63;
+}
+
+.hamburger input:checked+svg {
+      transform: rotate(-45deg);
+}
+
+.hamburger input:checked+svg .line-top-bottom {
+      stroke-dasharray: 20 300;
+      stroke-dashoffset: -32.42;
+}
+
 
 /* SECCION INICIO */
 .inicio {
@@ -97,31 +137,47 @@ html {
       letter-spacing: 1.8px;
 }
 
-/* GRID */
-.contenedor_grid {
-      margin: 1.5rem auto;
-      padding: 15px 25px;
+/* Footer */
+.content__footer {
+      background-color: #000000;
+      color: #fff;
+      text-align: center;
+      padding: 1.5rem 2.5rem;
 }
 
-/* Mision y Vision */
-.contenedor_img {
-      display: flex;
-      width: 1000px;
-      height: 430px;
-      margin: 2rem auto;
+.content__footer__title {
+      font-size: 2.3rem;
+      font-family: var(--third_font);
+      text-shadow: 5px 15px 20px #000;
 }
 
-.contenedor_img  img {
-      width: 0px;
-      flex-grow: 1;
-      object-fit: cover;
-      opacity: .8;
-      transition: .5s ease;
+.content__footer__text {
+      font-size: 1rem;
+      font-family: var(--secondary_font);
 }
 
-.contenedor_img  img:hover {
-      cursor: crosshair;
-      width: 350px;
-      opacity: 1;
-      filter: contrast(120%);
+.content__footer__text a {
+      text-decoration: none;
+      color: #347dc5bb;
+}
+
+/* Media */
+@media (max-width:700px) {
+      .contenedor_header{
+            top: -100%;
+            transition: all 0.5s ease-in-out;
+      }
+
+      .contenedor_header header {
+            margin-top: 1.8rem;
+            flex-direction: column;
+      }
+
+      .contenedor_header header ul {
+            flex-direction: column;
+      }
+
+      .nav_responsive {
+            display: block;
+      }
 }

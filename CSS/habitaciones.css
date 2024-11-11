@@ -1,0 +1,49 @@
+.card-3d {
+      perspective: 1000px;
+      transition: transform 0.3s;
+      text-align: center;
+}
+
+.card-3d:hover {
+      transform: rotateY(10deg);
+}
+
+.card-body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+}
+
+.card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+}
+
+/* Estructura del grid */
+.grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      padding: 2rem;
+}
+
+.section-title {
+      text-align: center;
+      margin: 2rem 0;
+      font-weight: bold;
+      font-size: 1.5rem;
+}
+
+/* Ajustes para el carrusel */
+@media (max-width: 750px) {
+      .grid-container {
+            display: none;
+      }
+
+      .carousel-item img {
+            object-fit: cover;
+            height: 300px;
+      }
+}

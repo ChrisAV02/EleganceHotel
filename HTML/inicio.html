@@ -8,6 +8,8 @@
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
             integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
       <link rel="stylesheet" href="../CSS/general.css">
+      <link rel="stylesheet" href="../CSS/inicio.css">
+      <link rel="icon" href="../RESOURCES/5-estrellas.png">
 </head>
 
 <body>
@@ -31,10 +33,18 @@
                               </li>
                         </ul>
                   </nav>
-                  <div class="nav_responsive">
-                        <img src="../RESOURCES/menu.png" alt="menu">
-                  </div>
             </header>
+      </div>
+      <div class="nav_responsive">
+            <label class="hamburger">
+                  <input type="checkbox" id="check">
+                  <svg viewBox="0 0 32 32">
+                        <path class="line line-top-bottom"
+                              d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22">
+                        </path>
+                        <path class="line" id="line__two" d="M7 16 27 16"></path>
+                  </svg>
+            </label>
       </div>
       <section class="inicio">
             <div class="contenedor__banner">
@@ -45,8 +55,8 @@
             <section class="container text-justify contenedor_grid">
                   <div class="row">
                         <div class="col">
-                              <h2>ELEGANCE HOTEL</h2>
-                              <P>
+                              <h2 class="contenedor_grid__title">ELEGANCE HOTEL</h2>
+                              <P class="contenedor_grid__text">
                                     Somos un establecimiento hotelero en todo el casco urbano de Chimbote, a media
                                     cuadra de
                                     la plaza de armas, siendo una sucursal más de nuestra marca ELEGANCE, en Elegance
@@ -60,29 +70,47 @@
                                           <img src="../RESOURCES/logo.jpg" alt="">
                                     </div>
                                     <div class="col">
-                                          <p>Ofrecemos habitaciones modernas, atención personalizada y exclusivas
-                                                comodidades.
-                                                Descubre la elegancia, descubre tu hogar lejos de casa. </p>
+                                          <p class="contenedor_grid__text">
+                                                Ofrecemos habitaciones modernas, atención personalizada y exclusivas
+                                                comodidades.Descubre la elegancia, descubre tu hogar lejos de casa.
+                                          </p>
                                     </div>
                               </div>
                         </div>
                   </div>
             </section>
-            <section class="contenedor_img container">
-                  <img src="../RESOURCES/img1.jpg" alt="">
-                  <img src="../RESOURCES/img2.jpg" alt="">
-                  <img src="../RESOURCES/img3.jpg" alt="">
-                  <img src="../RESOURCES/img4.jpg" alt="">
-                  <img src="../RESOURCES/img5.jpg" alt="">
+            <section class="contenedor__img__group">
+                  <h2 class="contenedor_grid__title" style="color: white; text-align: center;">Galería</h2>
+                  <p class="contenedor_grid__text" style="color: white; text-align: center;">Explora nuestras imágenes destacadas.</p>
+                  <section class="contenedor_img container carrusel">
+                        <button class="prev" onclick="moverCarrusel(-1)">&#10094;</button>
+                        <img src="../RESOURCES/img1.jpg" alt="">
+                        <img src="../RESOURCES/img2.jpg" alt="">
+                        <img src="../RESOURCES/img3.jpg" alt="">
+                        <img src="../RESOURCES/img4.jpg" alt="">
+                        <img src="../RESOURCES/img5.jpg" alt="">
+                        <button class="next" onclick="moverCarrusel(1)">&#10095;</button>
+                  </section>
             </section>
 
       </main>
       <footer>
-
+            <section class="content__footer">
+                  <h6 class="content__footer__title">Elegance Hotel</h6>
+                  <p class="content__footer__text">
+                        Enrique Palacios N° 247, Chimbote, Peru, Cel: <a href="tel: +51 974330198"> +51 974 330 198</a>,
+                        Email: <a href="mailto:U21309295@utp.edu.pe">elegancehotelventas@gmail.com</a>
+                  </p>
+                  <p class="content__footer__text">
+                        &copy;2024 - Todos los derechos reservados.
+                  </p>
+            </section>
       </footer>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
             crossorigin="anonymous"></script>
+      <script src="../JAVASCRIPT/burger.js"></script>
+      <script src="../JAVASCRIPT/carrusel.js"></script>
 </body>
 
 </html>
